@@ -3,37 +3,30 @@
 #include <string>
 #include <map>
 
+#include "KVParser.h"
+
+namespace Parsing
+{
+
 /*
-A K-V parser designed to accept input of the form:
+Parse an input string and produce a map. Accepts input of the form:
 
 foo=bar&baz=qux&zap=zazzle
 
-and produce a map of the form:
+and produces a map of the form:
 
 {
-  foo: 'bar',
-  baz: 'qux',
-  zap: 'zazzle'
+	foo: 'bar',
+	baz: 'qux',
+	zap: 'zazzle'
 }
+
+Parameters:
+	input: the input string to parse.
+
+Returns:
+	A map of keys and values parsed from the input string.
 */
-class KVParser
-{
-public:
-	/*
-	Constructor
-	*/
-	KVParser();
+std::map<std::string, std::string> parse(const std::string &input);
 
-	/*
-	Parse an input string and produce a map.
-
-	Parameters:
-		input: the input string to parse.
-
-	Returns:
-		A map of keys and values parsed from the input string.
-	*/
-	std::map<std::string, std::string> parse(const std::string input);
-};
-
-
+}
