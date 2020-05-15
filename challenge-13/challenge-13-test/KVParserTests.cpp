@@ -55,5 +55,3 @@ TEST(KVParser, parse_calledOnStringWithMultipleKeyValuePairs_returnsCorrectMap)
 	EXPECT_EQ("qux", result.at("baz"));
 	EXPECT_EQ("zazzle", result.at("zap"));
 }
-
-// Test: empty key and value contents, e.g. =&=&=
