@@ -40,7 +40,9 @@
     <ClInclude Include="..\challenge-13\KVParser.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\challenge-13\Counter.cpp" />
     <ClCompile Include="..\challenge-13\KVParser.cpp" />
+    <ClCompile Include="counterTests.cpp" />
     <ClCompile Include="KVParserTests.cpp" />
   </ItemGroup>
   <ItemGroup>
