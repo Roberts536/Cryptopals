@@ -72,6 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\James Roberts\source\repos\Utilities;C:\Users\James Roberts\source\repos\Cryptopals\Cryptopp;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -91,10 +92,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\James Roberts\source\repos\Cryptopals\Cryptopp\Win32\Output\Debug\cryptlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -151,11 +154,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Utilities\cpp-base64\base64.cpp" />
+    <ClCompile Include="..\..\..\Utilities\cryptoUtils\cryptoUtils.cpp" />
+    <ClCompile Include="..\..\..\Utilities\cryptoUtils\paddingUtils.cpp" />
+    <ClCompile Include="..\..\..\Utilities\randomUtils\randomUtils.cpp" />
     <ClCompile Include="challenge-13.cpp" />
     <ClCompile Include="Parsing.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Utilities\cpp-base64\base64.h" />
+    <ClInclude Include="..\..\..\Utilities\cryptoUtils\cryptoUtils.h" />
+    <ClInclude Include="..\..\..\Utilities\cryptoUtils\paddingUtils.h" />
+    <ClInclude Include="..\..\..\Utilities\randomUtils\randomUtils.h" />
     <ClInclude Include="Parsing.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
