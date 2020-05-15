@@ -55,3 +55,26 @@ TEST(Parsing, parse_calledOnStringWithMultipleKeyValuePairs_returnsCorrectMap)
 	EXPECT_EQ("qux", result.at("baz"));
 	EXPECT_EQ("zazzle", result.at("zap"));
 }
+
+TEST(Parsing, serialise_calledOnEmptyMap_returnsEmptyString)
+{
+	std::map<std::string, std::string> input;
+	EXPECT_EQ("", Parsing::serialise(input));
+}
+
+TEST(Parsing, serialise_calledOnMapWithOneItem_returnsCorrectString)
+{
+	std::map<std::string, std::string> input;
+	input["foo"] = "bar";
+	EXPECT_EQ("foo=bar", Parsing::serialise(input));
+}
+
+TEST(Parsing, serialise_calledOnMapWithMultipleItems_returnsCorrectString)
+{
+	std::map<std::string, std::string> input;
+	input["foo"] = "bar";
+	input["baz"] = "qux";
+	input["zap"] = "zazzle";
+	// Keys will be sorted alphabetically
+	EXPECT_EQ("baz=qux&foo=bar&zap=zazzle", Parsing::serialise(input));
+}

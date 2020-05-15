@@ -1,5 +1,6 @@
 #include <cstring>
 #include <exception>
+#include <sstream>
 #include <string>
 #include <map>
 #include <utility>
@@ -44,5 +45,27 @@ namespace Parsing
 		while (andPos != std::string::npos);
 
 		return result;
+	}
+
+	std::string serialise(std::map<std::string, std::string> map)
+	{
+		std::stringstream stream;
+
+		bool isFirst = true;
+		for (auto pair : map)
+		{
+			if (isFirst)
+			{
+				isFirst = false;
+			}
+			else
+			{
+				stream << '&';
+			}
+			
+			stream << pair.first << '=' << pair.second;
+		}
+
+		return stream.str();
 	}
 }

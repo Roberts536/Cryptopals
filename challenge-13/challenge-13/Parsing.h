@@ -29,4 +29,24 @@ Returns:
 */
 std::map<std::string, std::string> parse(const std::string &input);
 
+/*
+Undo the parsing operation by serialising a map into a string.
+
+Takes a map of the form:
+
+{
+	foo: 'bar',
+	baz: 'qux',
+	zap: 'zazzle'
+}
+
+and produces a string of the form:
+
+foo=bar&baz=qux&zap=zazzle
+
+Input:
+	map: The map to serialise.
+*/
+std::string serialise(std::map<std::string, std::string> map);
+
 }
