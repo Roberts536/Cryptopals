@@ -152,10 +152,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="challenge-13.cpp" />
+    <ClCompile Include="Counter.cpp" />
     <ClCompile Include="KVParser.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Counter.h" />
     <ClInclude Include="KVParser.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>

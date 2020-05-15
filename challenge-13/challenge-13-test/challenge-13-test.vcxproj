@@ -36,6 +36,7 @@
     <IncludePath>C:\Users\James Roberts\source\repos\Cryptopals\challenge-13\challenge-13;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
+    <ClInclude Include="..\challenge-13\Counter.h" />
     <ClInclude Include="..\challenge-13\KVParser.h" />
   </ItemGroup>
   <ItemGroup>
