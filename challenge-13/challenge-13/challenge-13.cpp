@@ -7,11 +7,12 @@
 int main()
 {
 
-
 }
 
-//std::string profileFor(std::string emailAddress)
-//{
-//	auto user = User(emailAddress, std::rand(), "user");
-//	auto map = user.toMap();
-//}
+std::string profileFor(std::string emailAddress)
+{
+	// Random IDs is sufficient for this challenge
+	auto user = User(emailAddress, std::rand(), "user");
+	std::string serialised = Parsing::serialise(user.toMap());
+	return serialised;
+}
