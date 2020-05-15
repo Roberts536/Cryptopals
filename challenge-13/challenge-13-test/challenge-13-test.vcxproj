@@ -36,14 +36,11 @@
     <IncludePath>C:\Users\James Roberts\source\repos\Cryptopals\challenge-13\challenge-13;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
-    <ClInclude Include="..\challenge-13\Counter.h" />
-    <ClInclude Include="..\challenge-13\KVParser.h" />
+    <ClInclude Include="..\challenge-13\Parsing.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\challenge-13\Counter.cpp" />
-    <ClCompile Include="..\challenge-13\KVParser.cpp" />
-    <ClCompile Include="counterTests.cpp" />
-    <ClCompile Include="KVParserTests.cpp" />
+    <ClCompile Include="..\challenge-13\Parsing.cpp" />
+    <ClCompile Include="parsingTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\challenge-13\challenge-13.vcxproj">

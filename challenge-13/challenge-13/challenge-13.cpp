@@ -1,6 +1,17 @@
-#include <iostream>
+#include <cstdlib>
+#include <string>
+
+#include "Parsing.h"
+#include "User.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+
 }
+
+//std::string profileFor(std::string emailAddress)
+//{
+//	auto user = User(emailAddress, std::rand(), "user");
+//	auto map = user.toMap();
+//}
