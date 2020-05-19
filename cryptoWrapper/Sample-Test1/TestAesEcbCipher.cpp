@@ -56,16 +56,6 @@ CPals::Buffer HexToBuffer(const std::string &hexString)
 namespace CPals
 {
 
-TEST(AesEcbEncrypt, Encrypt_CalledWithBufferNotMultipleOfBlockSize_ThrowsInvalidArgumentException) {
-	
-	auto padderPtr = std::make_unique<Pkcs7Padder>();
-	AesEcbCipher cipher(std::move(padderPtr));
-	auto input = Buffer(AesBlockSize + 1);
-	auto key = Buffer(AesKeySize);
-
-	EXPECT_THROW(cipher.Encrypt(input, key), std::invalid_argument);
-}
-
 TEST(AesEcbEncrypt, Encrypt_CalledWithWrongSizeKey_ThrowsInvalidArgumentException)
 {
 	auto padderPtr = std::make_unique<Pkcs7Padder>();
@@ -76,7 +66,7 @@ TEST(AesEcbEncrypt, Encrypt_CalledWithWrongSizeKey_ThrowsInvalidArgumentExceptio
 	EXPECT_THROW(cipher.Encrypt(input, key), std::invalid_argument);
 }
 
-TEST(AesEcbEncrypt, Encrypt_CalledWithValidArguments_ReturnsCorrectResult)
+TEST(AesEcbEncrypt, Encrypt_CalledWithValidArgumentsMultipleOfBlockSize_ReturnsCorrectResult)
 {
 	// Test vectors from NIST Algorithmic Validation programme:
 	// https://csrc.nist.gov/Projects/Cryptographic-Algorithm-Validation-Program
@@ -88,6 +78,21 @@ TEST(AesEcbEncrypt, Encrypt_CalledWithValidArguments_ReturnsCorrectResult)
 	auto key = HexToBuffer("2b7e151628aed2a6abf7158809cf4f3c");
 	auto expected = HexToBuffer(
 		"3ad77bb40d7a3660a89ecaf32466ef97a254be88e037ddd9d79fb6411c3f9df8");
+
+	EXPECT_EQ(expected, cipher.Encrypt(input, key));
+}
+
+TEST(AesEcbEncrypt, Encrypt_CalledWithValidArgumentsNotMultipleOfBlockSize_ReturnsCorrectResult)
+{
+	// Test vectors from NIST Algorithmic Validation programme:
+	// https://csrc.nist.gov/Projects/Cryptographic-Algorithm-Validation-Program
+	// Expected output adjusted to take into account padding
+
+	auto padderPtr = std::make_unique<Pkcs7Padder>();
+	AesEcbCipher cipher(std::move(padderPtr));
+	auto input = HexToBuffer("6bc1bee22e409f96e93d7e11739317");
+	auto key = HexToBuffer("2b7e151628aed2a6abf7158809cf4f3c");
+	auto expected = HexToBuffer("21ea2ba3e445a0ef710a7c26618d1975");
 
 	EXPECT_EQ(expected, cipher.Encrypt(input, key));
 }

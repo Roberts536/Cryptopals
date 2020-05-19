@@ -28,13 +28,6 @@ AesEcbCipher::AesEcbCipher(std::unique_ptr<IPadder> padder)
 
 Buffer AesEcbCipher::Encrypt(Buffer buf, const Buffer &key)
 {
-	if (buf.size() % AesBlockSize != 0)
-	{
-		throw std::invalid_argument(
-			"Input buffer must be a multiple of the block size (" 
-			+ std::to_string(AesBlockSize) + ")");
-	}
-
 	if (key.size() != AesKeySize)
 	{
 		throw std::invalid_argument(
@@ -110,7 +103,7 @@ Buffer AesEcbCipher::Decrypt(Buffer buf, const Buffer &key)
 				ciphertextBlock.data(),
 				AES::BLOCKSIZE);
 		}
-		catch (const CryptoPP::Exception& e)
+		catch (const CryptoPP::Exception&)
 		{
 			std::throw_with_nested(std::runtime_error("Decryption failed"));
 		}
@@ -125,7 +118,7 @@ Buffer AesEcbCipher::Decrypt(Buffer buf, const Buffer &key)
 	{
 		m_padder->Strip(plaintext);
 	}
-	catch (const std::invalid_argument &e)
+	catch (const std::invalid_argument&)
 	{
 		std::throw_with_nested(std::runtime_error(
 			"Could not strip padding from decrypted buffer"));
