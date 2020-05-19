@@ -15,42 +15,6 @@ namespace
 {
 constexpr unsigned int AesBlockSize = 16;
 constexpr unsigned int AesKeySize = 16;
-
-/*
-Convert a hex string to a buffer.
-
-Parameters:
-	hexString:	A hex string.
-
-Returns:
-	outputBuffer:	A buffer of the bytes represented by hexString.
-
-Throws:
-	std::invalid_argument: If hexString is not valid hex.
-*/
-CPals::Buffer HexToBuffer(const std::string &hexString)
-{
-	if (!std::all_of(
-		std::cbegin(hexString),
-		std::cend(hexString),
-		::isxdigit)
-		|| hexString.size() % 2 != 0)
-	{
-		throw std::invalid_argument("The input string is not valid hex");
-	}
-
-	CPals::Buffer outputBuffer;
-
-	for (std::size_t i = 0; i < hexString.size(); i += 2)
-	{
-		const auto hexChar = hexString.substr(i, 2);
-		auto dataPoint =
-			static_cast<std::uint8_t>(std::stoi(hexChar, nullptr, 16));
-		outputBuffer.push_back(dataPoint);
-	}
-
-	return outputBuffer;
-}
 }
 
 namespace CPals
