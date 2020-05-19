@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Crypto">
+      <UniqueIdentifier>{08947861-a568-4947-844d-edfa25ec6938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Padding">
+      <UniqueIdentifier>{7fbc928c-df94-4fa1-858e-0f0102c5a7fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Buffer">
+      <UniqueIdentifier>{3bfd7a8b-6870-4087-8612-e9bc35b1da78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Crypto\Universal">
+      <UniqueIdentifier>{7b142438-e06a-4e1d-aaca-ea92703964de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Crypto\CryptoPP">
+      <UniqueIdentifier>{5ab46974-a6e9-4f3a-bc61-925b901ad315}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pkcs7Padder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AesEcbCipher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Buffer.h">
+      <Filter>Header Files\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="IPadder.h">
+      <Filter>Header Files\Padding</Filter>
+    </ClInclude>
+    <ClInclude Include="Pkcs7Padder.h">
+      <Filter>Header Files\Padding</Filter>
+    </ClInclude>
+    <ClInclude Include="ICipher.h">
+      <Filter>Header Files\Crypto\Universal</Filter>
+    </ClInclude>
+    <ClInclude Include="AesEcbCipher.h">
+      <Filter>Header Files\Crypto\CryptoPP</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
