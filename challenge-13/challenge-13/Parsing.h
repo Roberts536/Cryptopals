@@ -5,7 +5,7 @@
 
 #include "parsing.h"
 
-namespace Parsing
+namespace CPals
 {
 
 /*
@@ -27,7 +27,7 @@ Parameters:
 Returns:
 	A map of keys and values parsed from the input string.
 */
-std::map<std::string, std::string> parse(const std::string &input);
+std::map<std::string, std::string> KVParse(const std::string &input);
 
 /*
 Undo the parsing operation by serialising a map into a string.
@@ -47,6 +47,6 @@ foo=bar&baz=qux&zap=zazzle
 Input:
 	map: The map to serialise.
 */
-std::string serialise(std::map<std::string, std::string> map);
+std::string KVSerialise(std::map<std::string, std::string> map);
 
 }
