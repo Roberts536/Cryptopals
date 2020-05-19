@@ -7,6 +7,7 @@
 #include "AesEcbCipher.h"
 #include "Buffer.h"
 #include "IPadder.h"
+#include "Pkcs7Padder.h"
 
 namespace
 {
@@ -16,6 +17,10 @@ namespace
 
 namespace CPals
 {
+
+AesEcbCipher::AesEcbCipher()
+	: m_padder(std::make_unique<Pkcs7Padder>())
+{ }
 
 AesEcbCipher::AesEcbCipher(std::unique_ptr<IPadder> padder)
 	: m_padder(std::move(padder))

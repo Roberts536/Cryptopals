@@ -29,6 +29,11 @@ public:
 	~AesEcbCipher() = default;
 
 	/*
+	Construct a cipher with a PKCS#7 padder.
+	*/
+	AesEcbCipher();
+
+	/*
 	Constructor.
 		
 	Parameters:
