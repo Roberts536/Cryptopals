@@ -76,7 +76,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\James Roberts\source\repos\Cryptopals\cryptoWrapper\cryptoWrapper;C:\Users\James Roberts\source\repos\Cryptopals\cpp-base64;C:\Users\James Roberts\source\repos\Cryptopals\Cryptopp;$(IncludePath)</IncludePath>
+    <IncludePath>C:\source\Cryptopals\cryptoWrapper\cryptoWrapper;C:\source\Cryptopals\Cryptopp;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

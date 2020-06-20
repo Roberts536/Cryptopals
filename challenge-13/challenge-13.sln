@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.1000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "challenge-13", "challenge-13\challenge-13.vcxproj", "{FA82C091-F4D1-4476-9032-B01AD9636102}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "challenge-13-test", "challenge-13-test\challenge-13-test.vcxproj", "{E2BED993-7774-4438-8609-F090499BB15A}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptlib", "..\Cryptopp\cryptlib.vcxproj", "{C39F4B46-6E89-4074-902E-CA57073044D2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptoWrapper", "..\cryptoWrapper\cryptoWrapper\cryptoWrapper.vcxproj", "{9A6F5EDA-87F4-488C-B932-09ED0C92452E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "challenge-13-test", "challenge-13-test\challenge-13-test.vcxproj", "{5BAD0E31-A946-4E02-A4F5-6B26818216A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,22 +39,6 @@ Global
 		{FA82C091-F4D1-4476-9032-B01AD9636102}.Release|x64.Build.0 = Release|x64
 		{FA82C091-F4D1-4476-9032-B01AD9636102}.Release|x86.ActiveCfg = Release|Win32
 		{FA82C091-F4D1-4476-9032-B01AD9636102}.Release|x86.Build.0 = Release|Win32
-		{E2BED993-7774-4438-8609-F090499BB15A}.Debug|x64.ActiveCfg = Debug|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.Debug|x64.Build.0 = Debug|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.Debug|x86.ActiveCfg = Debug|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.Debug|x86.Build.0 = Debug|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.DLL-Import Debug|x64.ActiveCfg = Debug|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.DLL-Import Debug|x64.Build.0 = Debug|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.DLL-Import Debug|x86.ActiveCfg = Debug|Win32
-		{E2BED993-7774-4438-8609-F090499BB15A}.DLL-Import Debug|x86.Build.0 = Debug|Win32
-		{E2BED993-7774-4438-8609-F090499BB15A}.DLL-Import Release|x64.ActiveCfg = Release|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.DLL-Import Release|x64.Build.0 = Release|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.DLL-Import Release|x86.ActiveCfg = Release|Win32
-		{E2BED993-7774-4438-8609-F090499BB15A}.DLL-Import Release|x86.Build.0 = Release|Win32
-		{E2BED993-7774-4438-8609-F090499BB15A}.Release|x64.ActiveCfg = Release|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.Release|x64.Build.0 = Release|x64
-		{E2BED993-7774-4438-8609-F090499BB15A}.Release|x86.ActiveCfg = Release|Win32
-		{E2BED993-7774-4438-8609-F090499BB15A}.Release|x86.Build.0 = Release|Win32
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Debug|x64.ActiveCfg = Debug|x64
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Debug|x64.Build.0 = Debug|x64
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Debug|x86.ActiveCfg = Debug|x64
@@ -87,6 +71,22 @@ Global
 		{9A6F5EDA-87F4-488C-B932-09ED0C92452E}.Release|x64.Build.0 = Release|x64
 		{9A6F5EDA-87F4-488C-B932-09ED0C92452E}.Release|x86.ActiveCfg = Release|Win32
 		{9A6F5EDA-87F4-488C-B932-09ED0C92452E}.Release|x86.Build.0 = Release|Win32
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.Debug|x64.ActiveCfg = Debug|x64
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.Debug|x64.Build.0 = Debug|x64
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.Debug|x86.ActiveCfg = Debug|Win32
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.Debug|x86.Build.0 = Debug|Win32
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.DLL-Import Debug|x64.ActiveCfg = Debug|x64
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.DLL-Import Debug|x64.Build.0 = Debug|x64
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.DLL-Import Debug|x86.ActiveCfg = Debug|Win32
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.DLL-Import Debug|x86.Build.0 = Debug|Win32
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.DLL-Import Release|x64.ActiveCfg = Release|x64
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.DLL-Import Release|x64.Build.0 = Release|x64
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.DLL-Import Release|x86.ActiveCfg = Release|Win32
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.DLL-Import Release|x86.Build.0 = Release|Win32
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.Release|x64.ActiveCfg = Release|x64
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.Release|x64.Build.0 = Release|x64
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.Release|x86.ActiveCfg = Release|Win32
+		{5BAD0E31-A946-4E02-A4F5-6B26818216A2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

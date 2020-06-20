@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{e2bed993-7774-4438-8609-f090499bb15a}</ProjectGuid>
+    <ProjectGuid>{5bad0e31-a946-4e02-a4f5-6b26818216a2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
@@ -32,16 +32,9 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\James Roberts\source\repos\Cryptopals\challenge-13\challenge-13;$(IncludePath)</IncludePath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\source\Cryptopals\challenge-13\challenge-13;$(IncludePath)</IncludePath>
   </PropertyGroup>
-  <ItemGroup>
-    <ClInclude Include="..\challenge-13\Parsing.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\challenge-13\Parsing.cpp" />
-    <ClCompile Include="parsingTests.cpp" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\challenge-13\challenge-13.vcxproj">
       <Project>{fa82c091-f4d1-4476-9032-b01ad9636102}</Project>
@@ -49,6 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\challenge-13\Parsing.cpp" />
+    <ClCompile Include="parsingTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\challenge-13\Parsing.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -73,13 +73,13 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
     </ClCompile>
     <Link>
