@@ -13,18 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Crypto">
+      <UniqueIdentifier>{e5eb0d21-f294-426c-8908-c72298f6d0fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Padding">
+      <UniqueIdentifier>{fa83c0f8-fece-4cbb-89a5-d77395f966af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="challenge-13.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="KVParser.cpp">
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cryptoWrapper\cryptoWrapper\AesEcbCipher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cryptoWrapper\cryptoWrapper\Pkcs7Padder.cpp">
+      <Filter>Header Files\Padding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cryptoWrapper\cryptoWrapper\Buffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="KVParser.h">
+    <ClInclude Include="User.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cryptoWrapper\cryptoWrapper\AesEcbCipher.h">
+      <Filter>Header Files\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cryptoWrapper\cryptoWrapper\ICipher.h">
+      <Filter>Header Files\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cryptoWrapper\cryptoWrapper\Buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cryptoWrapper\cryptoWrapper\IPadder.h">
+      <Filter>Header Files\Padding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cryptoWrapper\cryptoWrapper\Pkcs7Padder.h">
+      <Filter>Header Files\Padding</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

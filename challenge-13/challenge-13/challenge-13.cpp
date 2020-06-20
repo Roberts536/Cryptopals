@@ -1,20 +1,46 @@
-// challenge-13.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+#include <algorithm>
+#include <cstdlib>
 #include <iostream>
+#include <string>
+
+#include "AesEcbCipher.h"
+#include "Buffer.h"
+#include "Parsing.h"
+#include "User.h"
+
+namespace CPals
+{
+
+std::string profileFor(std::string emailAddress)
+{
+	// Sanitise
+	std::remove(std::begin(emailAddress), std::end(emailAddress), '=');
+	std::remove(std::begin(emailAddress), std::end(emailAddress), '&');
+
+	// Random IDs is sufficient for this challenge
+	auto user = User(emailAddress, std::rand(), "user");
+	std::string serialised = KVSerialise(user.toMap());
+	return serialised;
+}
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	auto encodedProfile{ CPals::profileFor("myName@myDomain.com") };
+	auto key{ CPals::StringToBuffer("YELLOW SUBMARINE") };
+
+	CPals::AesEcbCipher cipher;
+	CPals::Buffer ciphertext{ cipher.Encrypt(CPals::StringToBuffer(encodedProfile), key) };
+
+	CPals::Buffer plaintext{ cipher.Decrypt(ciphertext, key) };
+	std::string plaintextString{ plaintext.cbegin(), plaintext.cend() };
+
+	std::map<std::string, std::string> profile{ CPals::KVParse(plaintextString) };
+	std::cout << "Decrypted profile:" << std::endl;
+	for (const auto pair : profile)
+	{
+		std::cout << pair.first << " : " << pair.second << std::endl;
+	}
+
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
