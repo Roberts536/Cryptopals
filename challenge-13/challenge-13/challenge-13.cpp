@@ -18,16 +18,16 @@ std::string profileFor(std::string emailAddress)
 	std::remove(std::begin(emailAddress), std::end(emailAddress), '&');
 
 	// Pseudo-random 3-digit IDs are sufficient for this challenge
-	auto id = std::rand() % 900 + 100;
-	auto user = User(emailAddress, id, "user");
-	std::string serialised = KVSerialise(user.toMap());
+	const auto id = std::rand() % 900 + 100;
+	const auto user = User(emailAddress, id, "user");
+	const std::string serialised = KVSerialise(user.toMap());
 	return serialised;
 }
 }
 
 namespace
 {
-std::size_t blockSize{ 16 };
+constexpr std::size_t blockSize{ 16 };
 }
 
 int main()
@@ -69,7 +69,10 @@ int main()
 	email = "admin@bar.com";
 	encodedProfile = CPals::profileFor(email);
 	ciphertext = cipher.Encrypt(CPals::StringToBuffer(encodedProfile), key);
-	std::copy_n(adminBlock.begin(), blockSize, ciphertext.end() - blockSize);
+	
+	std::copy_n(adminBlock.begin(),
+				blockSize,
+				ciphertext.end() - blockSize);
 
 	/*
 	Suppose the attacker has sent their modified ciphertext to the server. The

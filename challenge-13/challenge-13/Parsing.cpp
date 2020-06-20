@@ -33,7 +33,8 @@ std::map<std::string, std::string> KVParse(const std::string &input)
 
 		// Find the next value
 		andPos = input.find('&', equalsPos);
-		auto value = input.substr(equalsPos + 1, andPos - equalsPos - 1);
+		const auto value = input.substr(equalsPos + 1,
+										andPos - equalsPos - 1);
 		if (value.size() == 0)
 		{
 			throw std::invalid_argument("Parsed an empty value");
@@ -47,12 +48,12 @@ std::map<std::string, std::string> KVParse(const std::string &input)
 	return result;
 }
 
-std::string KVSerialise(std::map<std::string, std::string> map)
+std::string KVSerialise(const std::map<std::string, std::string> &map)
 {
 	std::stringstream stream;
 
 	bool isFirst = true;
-	for (auto pair : map)
+	for (const auto pair : map)
 	{
 		if (isFirst)
 		{

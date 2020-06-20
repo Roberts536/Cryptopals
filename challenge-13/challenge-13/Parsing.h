@@ -47,6 +47,6 @@ foo=bar&baz=qux&zap=zazzle
 Input:
 	map: The map to serialise.
 */
-std::string KVSerialise(std::map<std::string, std::string> map);
+std::string KVSerialise(const std::map<std::string, std::string> &map);
 
 }
