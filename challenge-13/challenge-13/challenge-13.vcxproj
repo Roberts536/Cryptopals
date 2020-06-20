@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\James Roberts\source\repos\Cryptopals\Cryptopp;C:\Users\James Roberts\source\repos\Cryptopals\cryptoWrapper\cryptoWrapper;C:\Users\James Roberts\source\repos\Cryptopals\cpp-base64;$(IncludePath)</IncludePath>
+    <IncludePath>C:\source\Cryptopals\cryptoWrapper\cryptoWrapper;C:\source\Cryptopals\Cryptopp;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -98,7 +98,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Users\James Roberts\source\repos\Cryptopals\Cryptopp\Win32\Output\Debug\cryptlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
