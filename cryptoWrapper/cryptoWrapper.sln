@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testCryptoWrapper", "Sample-Test1\Sample-Test1.vcxproj", "{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptlib", "..\Cryptopp\cryptlib.vcxproj", "{C39F4B46-6E89-4074-902E-CA57073044D2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptoWrapper", "cryptoWrapper\cryptoWrapper.vcxproj", "{9A6F5EDA-87F4-488C-B932-09ED0C92452E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptoWrapper-test", "cryptoWrapper-test\cryptoWrapper-test.vcxproj", "{2B552A00-834A-4423-B9E2-9EBD1884C616}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,22 +21,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.Debug|x64.ActiveCfg = Debug|x64
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.Debug|x64.Build.0 = Debug|x64
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.Debug|x86.ActiveCfg = Debug|Win32
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.Debug|x86.Build.0 = Debug|Win32
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.DLL-Import Debug|x64.ActiveCfg = Debug|x64
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.DLL-Import Debug|x64.Build.0 = Debug|x64
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.DLL-Import Debug|x86.ActiveCfg = Debug|Win32
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.DLL-Import Debug|x86.Build.0 = Debug|Win32
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.DLL-Import Release|x64.ActiveCfg = Release|x64
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.DLL-Import Release|x64.Build.0 = Release|x64
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.DLL-Import Release|x86.ActiveCfg = Release|Win32
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.DLL-Import Release|x86.Build.0 = Release|Win32
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.Release|x64.ActiveCfg = Release|x64
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.Release|x64.Build.0 = Release|x64
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.Release|x86.ActiveCfg = Release|Win32
-		{76F3B6D5-18AC-43CD-A2A5-5EAEA3844FBF}.Release|x86.Build.0 = Release|Win32
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Debug|x64.ActiveCfg = Debug|x64
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Debug|x64.Build.0 = Debug|x64
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Debug|x86.ActiveCfg = Debug|Win32
@@ -69,6 +53,22 @@ Global
 		{9A6F5EDA-87F4-488C-B932-09ED0C92452E}.Release|x64.Build.0 = Release|x64
 		{9A6F5EDA-87F4-488C-B932-09ED0C92452E}.Release|x86.ActiveCfg = Release|Win32
 		{9A6F5EDA-87F4-488C-B932-09ED0C92452E}.Release|x86.Build.0 = Release|Win32
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.Debug|x64.ActiveCfg = Debug|x64
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.Debug|x64.Build.0 = Debug|x64
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.Debug|x86.ActiveCfg = Debug|Win32
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.Debug|x86.Build.0 = Debug|Win32
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.DLL-Import Debug|x64.ActiveCfg = Debug|x64
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.DLL-Import Debug|x64.Build.0 = Debug|x64
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.DLL-Import Debug|x86.ActiveCfg = Debug|Win32
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.DLL-Import Debug|x86.Build.0 = Debug|Win32
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.DLL-Import Release|x64.ActiveCfg = Release|x64
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.DLL-Import Release|x64.Build.0 = Release|x64
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.DLL-Import Release|x86.ActiveCfg = Release|Win32
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.DLL-Import Release|x86.Build.0 = Release|Win32
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.Release|x64.ActiveCfg = Release|x64
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.Release|x64.Build.0 = Release|x64
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.Release|x86.ActiveCfg = Release|Win32
+		{2B552A00-834A-4423-B9E2-9EBD1884C616}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

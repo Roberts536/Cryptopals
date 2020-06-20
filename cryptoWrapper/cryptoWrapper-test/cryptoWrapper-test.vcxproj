@@ -19,13 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{76f3b6d5-18ac-43cd-a2a5-5eaea3844fbf}</ProjectGuid>
+    <ProjectGuid>{2b552a00-834a-4423-b9e2-9ebd1884c616}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <ProjectName>testCryptoWrapper</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -34,26 +33,22 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)..\Cryptopp</IncludePath>
+    <IncludePath>C:\source\Cryptopals\cryptoWrapper\cryptoWrapper;C:\source\Cryptopals\Cryptopp;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)..\Cryptopp;$(SolutionDir)..\cryptoWrapper\cryptoWrapper;$(IncludePath)</IncludePath>
+    <IncludePath>C:\source\Cryptopals\cryptoWrapper\cryptoWrapper;C:\source\Cryptopals\Cryptopp;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="..\cryptoWrapper\AesEcbCipher.cpp" />
-    <ClCompile Include="..\cryptoWrapper\Pkcs7Padder.cpp" />
-    <ClCompile Include="TestAesEcbCipher.cpp" />
-    <ClCompile Include="TestPkcs7Padder.cpp" />
+    <ProjectReference Include="..\cryptoWrapper\cryptoWrapper.vcxproj">
+      <Project>{9a6f5eda-87f4-488c-b932-09ed0c92452e}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\cryptoWrapper\AesEcbCipher.h" />
-    <ClInclude Include="..\cryptoWrapper\Buffer.h" />
-    <ClInclude Include="..\cryptoWrapper\ICipher.h" />
-    <ClInclude Include="..\cryptoWrapper\IPadder.h" />
-    <ClInclude Include="..\cryptoWrapper\Pkcs7Padder.h" />
+    <ClCompile Include="TestAesEcbCipher.cpp" />
+    <ClCompile Include="TestPkcs7Padder.cpp" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -74,7 +69,6 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(SolutionDir)..\Cryptopp\Win32\Output\Debug\cryptlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -91,7 +85,6 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(SolutionDir)..\Cryptopp\x64\Output\Debug\cryptlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
