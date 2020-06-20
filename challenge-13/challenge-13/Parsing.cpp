@@ -14,9 +14,9 @@ std::map<std::string, std::string> KVParse(const std::string &input)
 {
 	std::map<std::string, std::string> result;
 
-	auto offset = 0;
-	auto equalsPos = 0;
-	auto andPos = 0;
+	std::size_t offset = 0;
+	std::size_t equalsPos = 0;
+	std::size_t andPos = 0;
 	do
 	{
 		// Find the next key
