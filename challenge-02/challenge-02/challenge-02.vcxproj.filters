@@ -18,7 +18,7 @@
     <ClCompile Include="HexXor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="challenge-2.cpp">
+    <ClCompile Include="challenge-02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

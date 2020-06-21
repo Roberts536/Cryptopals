@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HexXor.cpp" />
-    <ClCompile Include="challenge-2.cpp" />
+    <ClCompile Include="challenge-02.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HexXor.h" />
