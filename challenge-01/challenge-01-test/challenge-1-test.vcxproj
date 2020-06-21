@@ -36,7 +36,7 @@
     <IncludePath>C:\source\Cryptopals\utils\base64;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\challenge-1\challenge-1.vcxproj">
+    <ProjectReference Include="..\challenge-01\challenge-01.vcxproj">
       <Project>{a006830d-a1d1-44fd-8f70-51df8d9edb12}</Project>
     </ProjectReference>
   </ItemGroup>

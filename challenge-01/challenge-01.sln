@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "challenge-1", "challenge-1\challenge-1.vcxproj", "{A006830D-A1D1-44FD-8F70-51DF8D9EDB12}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "challenge-01", "challenge-01\challenge-01.vcxproj", "{A006830D-A1D1-44FD-8F70-51DF8D9EDB12}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "base64", "..\utils\base64\base64\base64.vcxproj", "{306F0A05-7728-4713-944C-764A3E1EB720}"
 EndProject
