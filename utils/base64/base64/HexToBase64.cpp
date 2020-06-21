@@ -1,6 +1,7 @@
 #include <string>
 
-constexpr char BASE64_LOOKUP[64] {
+constexpr char BASE64_LOOKUP[64]
+{
 		'A', 'B', 'C', 'D', 'E',
 		'F', 'G', 'H', 'I', 'J',
 		'K', 'L', 'M', 'N', 'O',
@@ -16,23 +17,6 @@ constexpr char BASE64_LOOKUP[64] {
 		'8', '9', '+', '/' };
 
 std::string HexToBase64(const std::string &input)
-/*
-A function to convert hex encoding to Base64 encoding.
-Does not pad the result with '=' characters.
-
-The input must have even length because Base64 operates on bytes,
-and each hex character is only half a byte.
-
-Parameters:
-	input:	(std::strin) a hex-encoded input string of even length.
-
-Returns:
-	result:	(std::string) the Base64 encoded version of the data in
-			the input string, without padding.
-
-Throws:
-			(std::invalid_argument) if the input string has odd length.
-*/
 {
 	if (input.length() % 2 != 0)
 	{
