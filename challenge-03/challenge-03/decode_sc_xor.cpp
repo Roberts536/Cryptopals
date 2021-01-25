@@ -40,7 +40,7 @@ std::string decode_sc_xor(std::string hex_input) {
 		}
 
 		// Score the printable portion of the plaintext
-		float score = english_score(plaintext_stream.str());
+		float score = englishDistanceScore(plaintext_stream.str());
 
 		// Introduce a penalty for unprintables
 		unsigned int len{ plaintext_stream.str().length() };

@@ -6,6 +6,8 @@
 #include <vector>
 #include <algorithm>
 
+#include "english_score.h"
+
 /* 
 Code for Set 1, Challenge 4 of Cryptopals.
 Challenge: detect which string has had 
@@ -13,8 +15,7 @@ repeating-key XOR applied to it, and decrypt it.
 */
 
 // Imports
-std::vector<unsigned char> hex_to_vuchar(
-	const std::string hex_input);
+std::vector<unsigned char> hex_to_vuchar(const std::string hex_input);
 float english_score(std::string text);
 float chisq_stat(
 	const std::vector<float> observed,
